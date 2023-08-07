@@ -43,19 +43,28 @@ public class Main {
         */
         MobilePhone iphone=new MobilePhone("5357260751");
        Contact c=Contact.createContact("mehmet","5357270852");
-        Contact c1=Contact.createContact("mehmet","5357270852");
+        Contact c1=Contact.createContact("mehmet2","5357270853");
         Contact c2=Contact.createContact("mustafa","5357270856");
         Contact c3=Contact.createContact("ayse","5357270857");
         Contact c4=Contact.createContact("ahmet","5357270855");
-        System.out.println(c4.name);
         iphone.addNewContact(c);
 
         iphone.addNewContact(c1);
         iphone.addNewContact(c2);
         iphone.addNewContact(c3);
+        iphone.addNewContact(c4);
 
 
+        for(Contact p: iphone.myContacts) {
+            System.out.println(p.getName());
+        }
         System.out.println(iphone.findContact("mustafa"));
+        System.out.println(iphone.updateContact(c,c4));
+
+        for(Contact p: iphone.myContacts) {
+            System.out.println(p.getName());
+        }
+
 
 
 

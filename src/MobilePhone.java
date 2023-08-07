@@ -26,6 +26,7 @@ public class MobilePhone {
         int d;
         if(myContacts.contains(c)){
             d=myContacts.indexOf(c);
+            myContacts.remove(d);
             myContacts.add(d, c1);
             return true;
 
